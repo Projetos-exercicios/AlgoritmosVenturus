@@ -16,23 +16,43 @@ Algoritmo "Exercício 001 - Aptitude na direção"
 
 Var
 // Seção de Declarações das variáveis 
-nome: caracter
-habi: logico
-idade: inteiro
+operador: caracter
+primeiroNumero,segundoNumero: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
-escreval("Escreva seu Nome, idade e habilitado")
-leia(nome,idade, habi)
-escreval("nome: ",nome)
-escreval("idade: ",idade)
-escreval("habilitacao: ",habi)
+ESCREVAL("Digite o primeiro número")
+LEIA(primeiroNumero)
 
-se(idade >= 18) e (habi = verdadeiro) entao
-    escreval("Liberação realizada para ",nome)
-senao
-    escreval("O cliente ",nome,"não atende a todos os requisitos obrigatórios")
-fimse
+ESCREVAL("Digite o operador")
+LEIA(operador)
 
+ESCREVAL("Digite o segundo número")
+LEIA(segundoNumero)
+
+ESCREVAL("Primeiro Número: ",primeiroNumero)
+ESCREVAL("")
+ESCREVAL("Operador: ",operador)
+ESCREVAL("")
+ESCREVAL("Segundo Número: ",segundoNumero)
+ESCREVAL("")
+ESCREVAL("")
+
+ESCOLHA operador
+   CASO "+"
+      ESCREVAL(" O resultado da operação é ",primeiroNumero + segundoNumero )
+   CASO "-"
+      ESCREVAL(" O resultado da operação é ",primeiroNumero - segundoNumero )
+   CASO "*"
+      ESCREVAL(" O resultado da operação é ",primeiroNumero * segundoNumero )
+   CASO "/"
+      SE b = 0 ENTAO
+         ESCREVAL(" O resultado indeterminação. Não é possível fazer divisões por 0 " )
+      SENAO
+         ESCREVAL(" O resultado da operação é ",primeiroNumero / segundoNumero )
+      FIMSE
+   OUTROCASO
+      ESCREVA("Operador não definido!")
+FIMESCOLHA
 
 Fimalgoritmo
